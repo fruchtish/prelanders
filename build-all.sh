@@ -12,7 +12,7 @@ DIRS=(
 
 for dir in "${DIRS[@]}"; do
   echo "Building $dir..."
-  cd "/mnt/c/Users/Bizdev/netlify-prelanders/$dir"
+  cd "$dir"
   
   # Use existing node_modules from wheel if not present
   if [ ! -d "node_modules" ]; then
@@ -28,6 +28,7 @@ for dir in "${DIRS[@]}"; do
   else
     echo "❌ $dir build failed"
   fi
+  cd ..
   echo ""
 done
 
