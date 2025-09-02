@@ -1,0 +1,33 @@
+# Global Netlify configuration
+
+[build]
+  publish = "dist"
+
+# Redirect rules for each subdomain
+[[redirects]]
+  from = "/wheel/*"
+  to = "/prelander-wheel-netlify/dist/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/newsletters/*"
+  to = "/prelander-newsletters-netlify/dist/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/scratch/*"
+  to = "/prelander-scratch-netlify/dist/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/slot/*"
+  to = "/prelander-slot-netlify/dist/:splat"
+  status = 200
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
