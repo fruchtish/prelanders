@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(cp:*)",
+      "Bash(npx vite:*)",
+      "Bash(chmod:*)",
+      "Bash(./build-all.sh)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git config:*)",
+      "Bash(gh:*)",
+      "Bash(git branch:*)",
+      "Bash(mkdir:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(tar:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "/mnt/c/Users/Bizdev/netlify-prelanders"
+    ]
+  }
+}
